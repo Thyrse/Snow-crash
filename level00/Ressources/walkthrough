@@ -1,0 +1,9 @@
+##LEVEL 00
+
+As its the beginning, we have to look up for something we can exploit. By going on `cd /usr/sbin` and `ls`, we may find a file named `john`.
+
+This file contains a code that can be decoded with cesar -> `cdiiddwpgswtgt -> nottoohardhere`
+
+Once we have this, we can assume we have to type `su flag00` and use this as a password.
+
+This done, just type `getflag` to go to the next level.

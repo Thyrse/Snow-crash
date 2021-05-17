@@ -1,0 +1,9 @@
+##LEVEL 11
+
+We can see that the `.lua` script is actually listening on 5151, so we can try to initiate the connection on it by using `nc localhost 5151`, which requires a password.
+
+Assuming we may get the flag directly, we tried to call the command directly ``getflag > /tmp/zaza``.
+It says the password is wrong, but by doing `cat /tmp/zaza`, we can see that the command has worked and we have the flag.
+
+
+f05d1d066fb246efe0c6f7d095f909a7a0cf34a0 can also be decrypted with sha1, giving "NotSoEasy".

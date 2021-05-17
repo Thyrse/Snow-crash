@@ -1,0 +1,30 @@
+##LEVEL 09
+
+Here we see that the executable is reading his first parameter, so we have to give it the token.
+
+However we notice that its reading the parameter as a string, so we can give it the output `cat token`. We notice now that the output is different. It changes every single character by its index (char + index in ASCII table) inside the string.
+
+We can assume we have to make a script that revert the changes made in way to get the token.
+
+`
+#!/usr/bin/php
+<?php
+function reversing($str) {
+        for ($i = 0, $l = strlen($str); $i < $l; $i++) {
+            $c = $str[$i];
+            if ($c >= '0' && $c <= '9' && $i >= 1) {
+                $str[$i] = $str[$i] - $i;
+             }
+else {
+$str[$i] = chr(ord($str[$i])-$i);
+}
+        }
+return $str;
+    }
+    echo reversing($argv[1]);
+?>
+`
+
+Then, `php /tmp/script.php `cat token`` gives us the password f3iji1ju5yuevaus41q1afiuq for flag09.
+
+Connect to flag09 and get the flag.

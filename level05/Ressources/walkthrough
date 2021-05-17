@@ -1,0 +1,9 @@
+##LEVEL 05
+
+Upon arrival, we can see that we received a mail. `cd /var/mail` & `cat level 05`.
+
+In `/usr/sbin` we can notice that flag05 has the rights for executing `openarenaserver`, which is a script that seems to read a file and delete it right after.
+Next, lets head to `/opt/openarenaserver`. Here we can create a script that redirect the output to another file : `/bin/getflag > /tmp/file`
+
+
+The cron is running every X min, so we have to wait for it to be executed in way to have our result. Once its done, `cat /tmp/file` to get the flag.

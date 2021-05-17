@@ -1,0 +1,7 @@
+##LEVEL 04
+
+Here we have a `.pl` extension file. `cat level04.pl` shows us a port that is probably running. Going to localhost:4747 is working.
+
+The script also mentions an x variable, which mean it can be used in some way as a parameter.
+
+The x parameter prints its value, so we can assume its possible to print the flag by executing getflag :  `localhost:4747/?x=`/bin/getflag``.

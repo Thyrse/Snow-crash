@@ -1,0 +1,7 @@
+##LEVEL 07
+
+By using `strings level07`, we can see the env variable LOGNAME is called with an echo call. Which mean it display the LOGNAME.
+
+Knowing this, we can assume we have to change the value of the LOGNAME variable in way to print the getflag.
+
+`export LOGNAME=\`getflag\`` & `./level07` gives us the flag.

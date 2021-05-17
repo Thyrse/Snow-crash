@@ -1,0 +1,13 @@
+##LEVEL 02
+
+Upon arrival, we can see a `.pcap` file. By looking on internet, we can see that it can be read with Wireshark.
+
+Lets download the software and send this file into it, by listening the TCP stream and decode it to UTF-8.
+
+Once its done, we obtain the following result -> ft_wandr...NDRel.L0L
+
+Here, each dot equal to a deletion. So we finally have this : ft_waNDReL0L.
+
+Now lets launch `su flag02` & `getflag` and head to the next level.
+
+(https://www.cloudshark.org/captures/d9353f10683c)

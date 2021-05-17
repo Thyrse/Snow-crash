@@ -1,0 +1,15 @@
+##LEVEL 01
+
+Again, looking for something to find, we can head to `/etc/` and see that the `passwd` file has different permissions.
+
+By `cat passwd`, we can see the password for flag01 is visible. According to the previous level's file, we can assume that john is a way to decode it.
+
+So lets use john the ripper. 
+
+`scp -P 4242 level01@192.168.0.14:/etc/passwd .`
+
+`./john ~/Documents/Work/passwd`
+
+We obtain the following result : `abcdefg`
+
+Then we can `su flag01` & type `getflag`, heading to next level.
